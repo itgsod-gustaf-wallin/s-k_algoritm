@@ -1,16 +1,15 @@
-def search(value:, array:)
+def search(value, array)
   ny_array = []
-  bryt_värde = 0
+  bryt_varde = 0
   dupe = 0
-  value = value
 
-  while bryt_värde == 0
+  while bryt_varde == 0
 
-    if value < array.last
+    if value < array.first
       puts "Finns inte med :(, alldeles för lågt yo"
       break
     end
-    if value > array.first
+    if value > array.last
       puts "Finns inte med :( alldeles för högt yo"
       break
     end
@@ -70,14 +69,13 @@ def search(value:, array:)
         break
       end
       puts array
-      bryt_värde = bryt_värde + 1
+      bryt_varde = bryt_varde + 1
     end
   end
 
 end
 
-v = -34256789
+v = 5
 a = [1, 2, 3, 4, 5, 7, 8, 9, 10, 20, 4000, 515151, 151235126216]
 
-search(value: v, array: a)
-bafaef
+search(v, a)
